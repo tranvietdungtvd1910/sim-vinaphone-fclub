@@ -4,238 +4,375 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SIM Vinaphone FCLUB – 3GB/ngày, dùng 12 tháng</title>
+  <title>SIM Vinaphone FCLUB – VNPT</title>
+
+  <!-- Google Font gần giống Digishop VNPT -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --primary: #0066cc;
-      --secondary: #00aaff;
-      --accent: #ffcc00;
-      --dark: #0f172a;
-      --light: #f8fafc;
+    :root{
+      --vnpt-blue:#0056a6;
+      --vnpt-red:#e60000;
+      --vnpt-gray:#f5f6f8;
+      --text-dark:#1f2937;
     }
 
-```
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #ffffff;
-}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Roboto',Arial,sans-serif;
+      color:var(--text-dark);
+      background:#fff;
+      line-height:1.6;
+    }
 
-.container {
-  width: 100%;
-  max-width: 1140px;
-  margin: auto;
-  padding: 0 16px;
-}
+    a{text-decoration:none;color:inherit}
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-  padding: 70px 0;
-  text-align: center;
-}
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:0 16px;
+    }
 
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 16px;
-}
+    /* HEADER */
+    header{
+      background:var(--vnpt-blue);
+      color:#fff;
+      padding:14px 0;
+    }
+    header .container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    header h1{font-size:20px;font-weight:700}
+    header .hotline{font-weight:500}
 
-.hero p {
-  font-size: 20px;
-  margin-bottom: 24px;
-}
+    /* HERO */
+    .hero{
+      background:linear-gradient(135deg,#0056a6,#0077cc);
+      color:#fff;
+      padding:60px 0;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:32px;
+      align-items:center;
+    }
+    .hero h2{
+      font-size:36px;
+      font-weight:700;
+      margin-bottom:16px;
+    }
+    .hero ul{margin:16px 0 24px 18px}
+    .hero li{margin-bottom:8px}
 
-.price-box {
-  background: rgba(255,255,255,0.15);
-  display: inline-block;
-  padding: 16px 28px;
-  border-radius: 12px;
-  margin-bottom: 28px;
-  font-size: 22px;
-  font-weight: bold;
-}
+    .price-box{
+      background:#fff;
+      color:var(--vnpt-blue);
+      padding:20px;
+      border-radius:12px;
+      text-align:center;
+    }
+    .price-box .price{
+      font-size:32px;
+      font-weight:700;
+      color:var(--vnpt-red);
+    }
+    .price-box span{font-size:14px}
 
-.cta {
-  display: inline-block;
-  padding: 14px 32px;
-  background: var(--accent);
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
+    .cta{
+      display:block;
+      margin-top:16px;
+      background:var(--vnpt-red);
+      color:#fff;
+      padding:14px;
+      border-radius:8px;
+      font-weight:700;
+      text-align:center;
+    }
+    .cta.secondary{background:#ffcc00;color:#000}
 
-.cta:hover { transform: scale(1.05); }
+    /* SECTION */
+    section{padding:60px 0}
+    section.gray{background:var(--vnpt-gray)}
+    .section-title{
+      font-size:28px;
+      font-weight:700;
+      color:var(--vnpt-blue);
+      margin-bottom:32px;
+      text-align:center;
+    }
 
-/* SECTION */
-section { padding: 60px 0; }
+    /* FEATURES */
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
+    }
+    .feature{
+      background:#fff;
+      border-radius:12px;
+      padding:24px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06);
+    }
+    .feature h3{color:var(--vnpt-blue);margin-bottom:8px}
 
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  color: var(--primary);
-  margin-bottom: 40px;
-}
+    /* CHECKOUT */
+    .checkout{
+      max-width:700px;
+      margin:auto;
+      background:#fff;
+      border-radius:12px;
+      padding:24px;
+      box-shadow:0 4px 16px rgba(0,0,0,0.08);
+    }
+    .checkout label{font-weight:500;display:block;margin-top:12px}
+    .checkout input, .checkout textarea, .checkout select{
+      width:100%;
+      padding:10px;
+      margin-top:6px;
+      border:1px solid #d1d5db;
+      border-radius:6px;
+    }
+    .payment-options{
+      margin-top:16px;
+    }
 
-/* FEATURES */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-}
+    /* FOOTER */
+    footer{
+      background:#0b2c5d;
+      color:#fff;
+      padding:30px 16px;
+      text-align:center;
+    }
 
-.feature-box {
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 24px;
-  text-align: center;
-}
+    @media(max-width:768px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero h2{font-size:28px}
+    }
+      /* FLOATING BUTTONS */
+    .floating-buttons{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      z-index:9999;
+    }
+    .float-btn{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:50px;
+      font-weight:600;
+      color:#fff;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    }
+    .zalo-btn{background:#0068ff}
+    .call-btn{background:#e60000}
+    .float-btn span{white-space:nowrap}
+      /* FLOATING BUTTONS */
+    .floating-buttons{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      z-index:9999;
+    }
+    .float-btn{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:50px;
+      font-weight:600;
+      color:#fff;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
+      animation:pulse 2s infinite;
+    }
+    .zalo-btn{background:#0068ff}
+    .call-btn{background:#e60000;animation-delay:1s}
+    .float-btn span{white-space:nowrap}
 
-.feature-box h3 {
-  color: var(--primary);
-  margin-bottom: 12px;
-}
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.06)}
+      100%{transform:scale(1)}
+    }
 
-/* BENEFITS */
-.benefits ul {
-  max-width: 700px;
-  margin: auto;
-  list-style: none;
-}
+    /* MOBILE CTA BAR */
+    .mobile-cta{
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      background:#fff;
+      border-top:1px solid #e5e7eb;
+      display:none;
+      z-index:9998;
+    }
+    .mobile-cta a{
+      width:50%;
+      display:inline-block;
+      text-align:center;
+      padding:14px 0;
+      font-weight:700;
+    }
+    .mobile-zalo{background:#0068ff;color:#fff}
+    .mobile-call{background:#e60000;color:#fff}
 
-.benefits li {
-  padding: 14px 0;
-  border-bottom: 1px dashed #ddd;
-  font-size: 18px;
-}
+    /* COUNTDOWN */
+    .countdown{
+      background:#ffeded;
+      color:#b91c1c;
+      padding:12px;
+      border-radius:8px;
+      margin-top:16px;
+      font-weight:700;
+      text-align:center;
+    }
 
-/* STEPS */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  text-align: center;
-}
-
-.step {
-  background: var(--light);
-  padding: 24px;
-  border-radius: 14px;
-  font-weight: bold;
-}
-
-/* FINAL CTA */
-.final-cta {
-  background: var(--primary);
-  color: white;
-  text-align: center;
-  padding: 60px 16px;
-}
-
-.final-cta h2 {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-
-/* FOOTER */
-footer {
-  background: #020617;
-  color: #e5e7eb;
-  text-align: center;
-  padding: 30px 16px;
-}
-
-footer strong { color: var(--accent); }
-
-@media (max-width: 768px) {
-  .hero h1 { font-size: 30px; }
-  .section-title { font-size: 26px; }
-}
-```
-
+    @media(max-width:768px){
+      .mobile-cta{display:flex}
+      body{padding-bottom:60px}
+    }
   </style>
+
 </head>
 <body>
 
-  <!-- HERO -->
-
-  <div class="hero">
-    <div class="container">
-      <h1>SIM VINAPHONE FCLUB</h1>
-      <p>3GB/ngày – Gọi thả ga – Dùng trọn 12 tháng</p>
-      <div class="price-box">Chỉ 790.000đ / 12 tháng</div><br />
-      <a href="#contact" class="cta">Mua ngay để nhận ưu đãi</a>
-    </div>
+<header>
+  <div class="container">
+    <h1>VNPT Vinaphone</h1>
+    <div class="hotline">Hotline: 0354 150 777</div>
   </div>
+</header>
 
-  <!-- FEATURES -->
-
-  <section>
-    <div class="container">
-      <h2 class="section-title">Ưu đãi gói FCLUB</h2>
-      <div class="features">
-        <div class="feature-box">
-          <h3>📶 Data khủng</h3>
-          <p>3GB/ngày – 90GB/tháng<br>Hết dung lượng dừng truy cập</p>
-        </div>
-        <div class="feature-box">
-          <h3>📞 Gọi nội mạng</h3>
-          <p>1.500 phút/tháng<br>Thoải mái liên lạc</p>
-        </div>
-        <div class="feature-box">
-          <h3>☎️ Gọi ngoại mạng</h3>
-          <p>60 phút/tháng<br>Đủ dùng cho nhu cầu cơ bản</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BENEFITS -->
-
-  <section class="benefits">
-    <div class="container">
-      <h2 class="section-title">Vì sao nên chọn SIM FCLUB?</h2>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h2>SIM VINAPHONE FCLUB – DATA KHỦNG 12 THÁNG</h2>
       <ul>
-        <li>✔ Sử dụng hạ tầng Vinaphone – sóng mạnh toàn quốc</li>
-        <li>✔ Tiết kiệm hơn 60% so với gói tháng thông thường</li>
-        <li>✔ Không phát sinh phí ngoài ý muốn</li>
-        <li>✔ Phù hợp sinh viên, dân văn phòng, tài xế công nghệ</li>
+        <li>✔ 3GB/ngày (90GB/tháng) – Hết dung lượng dừng truy cập</li>
+        <li>✔ 1.500 phút gọi nội mạng Vinaphone</li>
+        <li>✔ 60 phút gọi ngoại mạng</li>
+        <li>✔ Một lần đăng ký – dùng trọn năm</li>
       </ul>
+      <a href="#checkout" class="cta secondary">Khám phá chi tiết</a>
     </div>
-  </section>
+        <div class="price-box">
+      <div class="countdown">Ưu đãi kết thúc sau: <span id="timer">--:--:--</span></div>
+      <div class="price">790.000đ</div>
+      <span>/ 12 tháng</span>
+      <a href="#checkout" class="cta">Mua ngay để nhận ưu đãi</a>
+    </div>
+  </div>
+</section>
 
-  <!-- STEPS -->
-
-  <section>
-    <div class="container">
-      <h2 class="section-title">Cách mua SIM</h2>
-      <div class="steps">
-        <div class="step">1️⃣ Liên hệ tư vấn</div>
-        <div class="step">2️⃣ Chốt đơn – giữ SIM</div>
-        <div class="step">3️⃣ Giao SIM & kích hoạt</div>
+<section class="gray">
+  <div class="container">
+    <h2 class="section-title">Lợi ích nổi bật của gói FCLUB</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Data ổn định</h3>
+        <p>Sử dụng hạ tầng Vinaphone, tốc độ cao, phủ sóng toàn quốc.</p>
+      </div>
+      <div class="feature">
+        <h3>Chi phí tiết kiệm</h3>
+        <p>Chỉ ~65.000đ/tháng cho cả data & nghe gọi.</p>
+      </div>
+      <div class="feature">
+        <h3>An tâm sử dụng</h3>
+        <p>Không phát sinh phí – hết data là ngừng truy cập.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FINAL CTA -->
+<section id="checkout">
+  <div class="container">
+    <h2 class="section-title">Thông tin thanh toán & giao SIM</h2>
+        <div class="checkout">
+      <!-- FORM gửi về Google Form -->
+      <form action="https://docs.google.com/forms/d/e/REPLACE_FORM_ID/formResponse" method="POST" target="_blank">
+      <label>Họ và tên</label>
+      <input type="text" placeholder="Nhập họ tên" />
 
-  <div class="final-cta">
-    <h2>Ưu đãi có hạn – Đăng ký ngay hôm nay</h2>
-    <a href="#contact" class="cta">Khám phá chi tiết</a>
+```
+  <label>Số điện thoại</label>
+  <input type="tel" placeholder="Nhập số điện thoại" />
+
+  <label>Email</label>
+  <input type="email" placeholder="Nhập email" />
+
+  <label>Địa chỉ nhận SIM</label>
+  <textarea rows="3" placeholder="Số nhà, phường/xã, quận/huyện, tỉnh/thành"></textarea>
+
+  <label>Hình thức thanh toán</label>
+  <div class="payment-options">
+    <label><input type="radio" name="pay" /> Chuyển khoản 100% tiền SIM</label><br>
+    <label><input type="radio" name="pay" /> Thanh toán khi nhận SIM (COD)</label>
   </div>
 
-  <!-- FOOTER -->
+        <button type="submit" class="cta" style="margin-top:20px;width:100%;border:none">Xác nhận đặt SIM</button>
+  </form>
+</div>
+```
 
-  <footer id="contact">
-    <p><strong>Dũng Trần – VNPT</strong></p>
-    <p>Hotline / Zalo: <strong>0354 150 777</strong></p>
-    <p>Hỗ trợ toàn quốc – Tư vấn miễn phí</p>
-  </footer>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Dũng Trần – VNPT</strong></p>
+  <p>Hotline / Zalo: <strong>0354 150 777</strong></p>
+  <p>Hỗ trợ toàn quốc – Tư vấn miễn phí</p>
+</footer>
+
+<!-- FLOATING ZALO & CALL -->
+
+<div class="floating-buttons">
+  <a href="https://zalo.me/0354150777" class="float-btn zalo-btn" target="_blank">
+    💬 <span>Chat Zalo</span>
+  </a>
+  <a href="tel:0354150777" class="float-btn call-btn">
+    📞 <span>Gọi ngay</span>
+  </a>
+</div>
+
+<!-- MOBILE CTA BAR -->
+
+<div class="mobile-cta">
+  <a href="https://zalo.me/0354150777" class="mobile-zalo">💬 Zalo tư vấn</a>
+  <a href="tel:0354150777" class="mobile-call">📞 Gọi ngay</a>
+</div>
+
+<!-- FLOATING ZALO & CALL -->
+
+<div class="floating-buttons">
+  <a href="https://zalo.me/0354150777" class="float-btn zalo-btn" target="_blank">💬 <span>Chat Zalo</span></a>
+  <a href="tel:0354150777" class="float-btn call-btn">📞 <span>Gọi ngay</span></a>
+</div>
+
+<script>
+  // Countdown 24h
+  const end = new Date().getTime() + 24*60*60*1000;
+  const timerEl = document.getElementById('timer');
+  setInterval(() => {
+    const now = new Date().getTime();
+    const d = end - now;
+    if(d <= 0){ timerEl.innerText = 'Đã hết hạn'; return; }
+    const h = Math.floor(d/(1000*60*60));
+    const m = Math.floor((d%(1000*60*60))/(1000*60));
+    const s = Math.floor((d%(1000*60))/1000);
+    timerEl.innerText = `${h}h ${m}m ${s}s`;
+  },1000);
+</script>
 
 </body>
 </html>
