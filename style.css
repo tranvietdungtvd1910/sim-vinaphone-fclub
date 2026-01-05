@@ -17,9 +17,10 @@ body {
 
 /* HEADER */
 .header {
-  background: #0056a3;
-  color: #fff;
-  padding: 12px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  color: #0a2540;
+  padding: 14px 0;
 }
 
 .header-flex {
@@ -29,7 +30,7 @@ body {
 }
 
 .logo {
-  height: 50px;
+  height: 64px;
 }
 
 /* HERO */
@@ -170,3 +171,9 @@ body {
     font-size: 24px;
   }
 }
+@media (max-width: 768px) {
+  .logo {
+    height: 44px;
+  }
+}
+
